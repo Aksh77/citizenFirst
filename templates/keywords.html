@@ -3,10 +3,40 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 </head>
 <body>
+
+<script type="text/javascript">
+var buttonClicked = null;
+
+function highlight(element) {
+    if (buttonClicked != null) {
+    	 buttonClicked = element;
+        buttonClicked.style.background = "blue";
+        buttonClicked.style.color = "white";
+    }
+
+   buttonClicked = element;
+   buttonClicked.style.background = "blue";
+        buttonClicked.style.color = "white";
+
+}
+</script>
+
 <div id="wrapper">
+  <h2> {{ username }} </h2>
 {% for keyword in keywords %}
-  <button>{{ keyword }}</button>
+<form method="post" action="{{ url_for('get_keywords') }}">
+  <button id="{{ keyword }}" onclick="highlight(this)" style="width: 200px" type="submit" name="keyword" value="{{ keyword }}">{{ keyword }}</button>
+</form>
 {% endfor %}
+</div>
+<div id="selectedKeywords">
+<h2>Selected topics of interest -</h2>
+{% for keyword in userKeywords %}
+<button>{{ keyword }}</button>
+{% endfor %}
+<form style="padding-top: 20px" method="post" action="{{ url_for('get_newsfeed') }}">
+  <button style="width: 200px" type="submit" name="userKeywords" value="{{ userKeywords }}">Submit</button>
+</form>
 </div>
 </body>
 </html>
