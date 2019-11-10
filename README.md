@@ -1,4 +1,4 @@
-# delimiters
+# Citizen First
 
 Project for SheHacks 2019
 
@@ -9,5 +9,8 @@ Project for SheHacks 2019
 
 ## Contributors
 
+[Akshatha Nayak](github.com/aksh77)
 [Enfa Rose George](github.com/enfageorge)
+[Garima Yadav](github.com/gary115)
+[Sneha Jayasankar]()
 
