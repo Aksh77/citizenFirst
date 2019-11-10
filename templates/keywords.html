@@ -1,42 +1,62 @@
-<html>
-<head>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<script type="text/javascript">
-var buttonClicked = null;
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-function highlight(element) {
-    if (buttonClicked != null) {
-    	 buttonClicked = element;
-        buttonClicked.style.background = "blue";
-        buttonClicked.style.color = "white";
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    var buttonClicked = null;
+
+    function highlight(element) {
+        if (buttonClicked != null) {
+        	 buttonClicked = element;
+            buttonClicked.style.background = "blue";
+            buttonClicked.style.color = "white";
+        }
+       buttonClicked = element;
+       buttonClicked.style.background = "blue";
+       buttonClicked.style.color = "white";
+
     }
+    </script>
 
-   buttonClicked = element;
-   buttonClicked.style.background = "blue";
-        buttonClicked.style.color = "white";
-
-}
-</script>
-
-<div id="wrapper">
-  <h2> {{ username }} </h2>
-{% for keyword in keywords %}
-<form method="post" action="{{ url_for('get_keywords') }}">
-  <button id="{{ keyword }}" onclick="highlight(this)" style="width: 200px" type="submit" name="keyword" value="{{ keyword }}">{{ keyword }}</button>
-</form>
-{% endfor %}
-</div>
-<div id="selectedKeywords">
-<h2>Selected topics of interest -</h2>
-{% for keyword in userKeywords %}
-<button>{{ keyword }}</button>
-{% endfor %}
-<form style="padding-top: 20px" method="post" action="{{ url_for('get_newsfeed') }}">
-  <button style="width: 200px" type="submit" name="userKeywords" value="{{ userKeywords }}">Submit</button>
-</form>
-</div>
-</body>
+    <div class="container">
+      <div class="row">
+        <h4 style="padding-top: 20px">Select causes of interest</h4>
+        <hr></hr>
+      </div>
+        <div class="row">
+          {% for keyword in keywords %}
+          <form method="post" action="{{ url_for('get_keywords') }}">
+            <button id="{{ keyword }}" onclick="highlight(this)" style="width: 200px" type="submit" name="keyword" value="{{ keyword }}">{{ keyword }}</button>
+          </form>
+          {% endfor %}
+        </div>
+        <div class="row">
+          <h4 style="padding-top: 20px">Selected topics :  </h4>
+        </div>
+        <div class="row">
+          {% for keyword in userKeywords %}
+          <button style="width: 200px">{{ keyword }}</button>
+          {% endfor %}
+        </div>
+        <div class="row">
+          <form style="padding-top: 20px" method="post" action="{{ url_for('get_newsfeed') }}">
+            <button class="btn-submit" style="width: 200px" type="submit" name="userKeywords" value="{{ userKeywords }}">Submit</button>
+          </form>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>

@@ -1,17 +1,35 @@
-Enfa Rose,"['LGBTQIA+', 'WomenRights']"
-Aksh,"['LGBTQIA+', 'WomenRights']"
-Harsha,"['LGBTQIA+', 'WomenRights']"
-Harshitha,"['Community', 'Dalits']"
-,"[u'Child Marriage', u'Child Labour', u'Religious Violence']"
+,['Corruption']
+,['Corruption']
+,['Women']
+,['Women']
+,['Women']
+,['Women']
+,['Women']
+,"['Women', 'Communalism']"
+,"['Women', 'Communalism']"
+,"['Women', 'Communalism']"
+,"['Women', 'Communalism', 'Corruption']"
+,"['Communalism', 'Poverty']"
+,['Women']
+,['Women']
+,['Women']
+,['Women']
+,['Women']
+,"['Communalism', 'Women']"
+,['Women']
+,['Women']
+,['Women']
+,"['Poverty', 'Communalism', 'Religious Violence', 'Women', 'Child Marriage', 'Child Trafficking', 'Marital Rape']"
+,"['Poverty', 'Communalism', 'Religious Violence', 'Women', 'Child Marriage', 'Child Trafficking', 'Marital Rape']"
+,"['Poverty', 'Communalism', 'Religious Violence', 'Women', 'Child Marriage', 'Child Trafficking', 'Marital Rape']"
 ,[]
-,"[u' Untouchability', u'Overpopulation', u'Gender Inequality']"
-,"[u' Untouchability', u'Overpopulation', u'Gender Inequality', u'Corruption', u'Child Marriage']"
-,"[u'Starvation', u'Child Labour']"
-,"[u'Child Marriage', u'Child Trafficking', u'Child Sexual Abuse']"
-,[]
-,"[u'Child Marriage', u'Child Labour', u'Gender Inequality']"
-,"[u'Poverty', u'Casteism', u'Corruption']"
-,"[u'Poverty', u'Casteism', u'Corruption', u'Terrorism', u' Untouchability']"
-,"[u'Casteism', u' Untouchability', u'Corruption']"
-,"[u'Poverty', u'Terrorism', u'Casteism']"
-,"[u'Poverty', u'Illiteracy', u'Child Sexual Abuse', u'Religious Violence']"
+,['Child Trafficking']
+,['Child Trafficking']
+,"['Women', 'Poverty']"
+,"['Women', 'Poverty', 'Child Sexual Abuse']"
+,"['Women', 'Poverty', 'Child Sexual Abuse', 'Child Trafficking']"
+,['Child Marriage']
+,"['Child Marriage', 'Child Trafficking', 'Child Sexual Abuse']"
+,"['Child Marriage', 'Child Trafficking', 'Child Sexual Abuse', 'Poverty']"
+,"['Marital Rape', 'Child Trafficking']"
+,"['Women', 'Child Sexual Abuse']"
